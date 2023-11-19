@@ -44,6 +44,22 @@ To evaluate an expression and display the result in binary with a width of 8, 16
 ```bash
 ./calc -e "0xA + 1" -b 2 -w 8
 ```
+### Other Examples
+
+Input:
+```bash
+./calc -b 10 -e "(2 * (0b1111 & 0b1010))"
+```
+Output:
+``20``
+
+Input:
+```bash
+./calc -e "~((4 ^ 3) | (1 << 16))" -b 16
+```
+Output:
+``0xFFFEFFF8``
+
 
 ### Default Base and Width
 If no base or width flag is provided, the default output base is 10, and the default width is
